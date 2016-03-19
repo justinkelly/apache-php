@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:precise
 MAINTAINER Justin Kelly <justin@kelly.org.au>
 
 # Install base packages
