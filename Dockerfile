@@ -10,6 +10,7 @@ RUN apt-get update && \
         php5-mysql \
         php5-mcrypt \
         php5-gd \
+        php5-xsl \
         php5-curl \
         php-pear \
         php-apc && \
