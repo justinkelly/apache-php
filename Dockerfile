@@ -35,7 +35,7 @@ RUN chmod 755 /*.sh
 RUN mkdir -p /app && rm -fr /var/www && ln -s /app /var/www
 ADD sample/ /app
 
-VOLUME /data/invoice:/app
+VOLUME "/data/invoice:/app"
 
 EXPOSE 80
 WORKDIR /app
