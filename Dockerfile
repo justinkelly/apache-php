@@ -20,11 +20,11 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
     sed -i "s/variables_order.*/variables_order = \"EGPCS\"/g" /etc/php5/apache2/php.ini
 
 ENV ALLOW_OVERRIDE **False**
-ENV DB_HOST 
-ENV DB_NAME 
-ENV DB_PASS
+ENV DB_HOST DB_HOST
+ENV DB_NAME DB_NAME
+ENV DB_PASS DB_PASS
 ENV DB_PORT="3306"
-ENV DB_USER
+ENV DB_USER DB_USER
 ENV VIRTUAL_HOST
 
 # Add image configuration and scripts
