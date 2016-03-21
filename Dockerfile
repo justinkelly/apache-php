@@ -20,6 +20,12 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
     sed -i "s/variables_order.*/variables_order = \"EGPCS\"/g" /etc/php5/apache2/php.ini
 
 ENV ALLOW_OVERRIDE **False**
+ENV DB_HOST 
+ENV DB_NAME 
+ENV DB_PASS
+ENV DB_PORT="3306"
+ENV DB_USER
+ENV VIRTUAL_HOST
 
 # Add image configuration and scripts
 ADD run.sh /run.sh
@@ -28,6 +34,8 @@ RUN chmod 755 /*.sh
 # Configure /app folder with sample app
 RUN mkdir -p /app && rm -fr /var/www && ln -s /app /var/www
 ADD sample/ /app
+
+VOLUME /data/invoice:/app
 
 EXPOSE 80
 WORKDIR /app
