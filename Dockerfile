@@ -33,7 +33,8 @@ RUN chmod 755 /*.sh
 
 # Configure /app folder with sample app
 RUN mkdir -p /app && rm -fr /var/www && ln -s /app /var/www
-ADD sample/ /app
+#ADD sample/ /app
+ADD simpleinvoices/ /app
 
 #VOLUME "/data/invoice:/app"
 
