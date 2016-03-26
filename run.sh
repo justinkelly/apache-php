@@ -9,7 +9,7 @@ else
 fi
 
 source /etc/apache2/envvars
-/s3 --region "us-west-2" sync s3://invoice.im/${DOMAIN}/logo /app/templates/invoices/logos/
+/s3 --region "us-west-2" sync s3://invoice.im/${DOMAIN}/logo/ /app/templates/invoices/logos/
 /s3 --region "us-west-2" sync s3://invoice.im/${DOMAIN}/template/ /app/templates/invoices/
 tail -F /var/log/apache2/* &
 exec apache2 -D FOREGROUND
