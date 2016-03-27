@@ -14,6 +14,7 @@ RUN apt-get update && \
         php5-curl \
         php-pear \
         php-apc && \
+        mysql-client && \
     rm -rf /var/lib/apt/lists/* && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
