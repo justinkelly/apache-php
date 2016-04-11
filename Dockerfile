@@ -50,6 +50,6 @@ ADD simpleinvoices/ /app
 
 #VOLUME "/data/invoice:/app"
 
-EXPOSE 80
+EXPOSE 80 443
 WORKDIR /app
 CMD ["/run.sh"]
