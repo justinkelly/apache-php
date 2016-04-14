@@ -13,7 +13,8 @@ RUN apt-get update && \
         php5-xsl \
         php5-curl \
         php-pear \
-        php-apc && \
+        php-apc \
+        ssmtp && \
     rm -rf /var/lib/apt/lists/* && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
@@ -45,8 +46,10 @@ RUN chmod 755 /*.sh
 
 # Configure /app folder with sample app
 RUN mkdir -p /app && rm -fr /var/www && ln -s /app /var/www
-#ADD sample/ /app
+
+#add folders
 ADD simpleinvoices/ /app
+ADD ssmtp.conf /etc/ssmtp.conf
 
 #VOLUME "/data/invoice:/app"
 
