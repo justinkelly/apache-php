@@ -49,7 +49,7 @@ RUN mkdir -p /app && rm -fr /var/www && ln -s /app /var/www
 
 #add folders
 ADD simpleinvoices/ /app
-ADD ssmtp.conf /etc/ssmtp.conf
+ADD ssmtp.conf /etc/ssmtp/ssmtp.conf
 
 #VOLUME "/data/invoice:/app"
 
