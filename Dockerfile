@@ -2,7 +2,8 @@ FROM ubuntu:trusty
 MAINTAINER Justin Kelly <justin@kelly.org.au>
 
 # Install base packages
-RUN add-apt-repository ppa:sergey-dryabzhinsky/php53
+RUN apt-get install software-properties-common && \
+	add-apt-repository ppa:sergey-dryabzhinsky/php53
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -yq install \
         curl \
