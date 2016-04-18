@@ -10,7 +10,6 @@ RUN apt-get update && \
         curl \
         apache2 \
         libapache2-mod-php53 \
-        php53-common \
         php53-mod-mysql \
         php53-mod-mcrypt \
         php53-mod-gd \
