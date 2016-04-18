@@ -8,6 +8,7 @@ RUN add-apt-repository -y ppa:sergey-dryabzhinsky/php53 > /dev/null 2>&1
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -yq install \
         curl \
+        postfix \
         mailutils \
 	ssmtp \
         apache2 \
