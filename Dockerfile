@@ -2,18 +2,20 @@ FROM ubuntu:trusty
 MAINTAINER Justin Kelly <justin@kelly.org.au>
 
 # Install base packages
+RUN add-apt-repository ppa:sergey-dryabzhinsky/php53
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -yq install \
         curl \
         apache2 \
-        libapache2-mod-php5 \
-        php5-mysql \
-        php5-mcrypt \
-        php5-gd \
-        php5-xsl \
-        php5-curl \
-        php-pear \
-        php-apc \
+        libapache2-mod-php53 \
+        php53-common \
+        php53-mod-mysql \
+        php53-mod-mcrypt \
+        php53-mod-gd \
+        php53-mod-xsl \
+        php53-mod-curl \
+        php53-pear \
+        php53-apc \
         ssmtp && \
     rm -rf /var/lib/apt/lists/* && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
