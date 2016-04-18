@@ -17,7 +17,6 @@ RUN apt-get update && \
         php53-mod-xsl \
         php53-mod-curl \
         php53-pear \
-        php53-apc \
         ssmtp && \
     rm -rf /var/lib/apt/lists/* && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
