@@ -2,7 +2,7 @@ FROM ubuntu:trusty
 MAINTAINER Justin Kelly <justin@kelly.org.au>
 
 # Install base packages
-RUN apt-get install software-properties-common 
+RUN apt-get -yq install software-properties-common 
 RUN add-apt-repository -y ppa:sergey-dryabzhinsky/php53 > /dev/null 2>&1
 
 RUN apt-get update && \
