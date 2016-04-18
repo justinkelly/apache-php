@@ -8,15 +8,17 @@ RUN add-apt-repository -y ppa:sergey-dryabzhinsky/php53 > /dev/null 2>&1
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -yq install \
         curl \
+        ssmtp \
         apache2 \
         libapache2-mod-php53 \
+        php53-common \
+        php53-cli \
         php53-mod-mysql \
         php53-mod-mcrypt \
         php53-mod-gd \
         php53-mod-xsl \
         php53-mod-curl \
-        php53-pear \
-        ssmtp && \
+        php53-pear && \
     rm -rf /var/lib/apt/lists/* && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
