@@ -19,8 +19,8 @@ RUN apt-get update && \
         php53-mod-xsl \
         php53-mod-curl \
         php53-pear && \
-    rm -rf /var/lib/apt/lists/* && \
-    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+    rm -rf /var/lib/apt/lists/* 
+
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
     sed -i "s|\("MaxSpareServers" * *\).*|\12|" /etc/apache2/apache2.conf && \
     sed -i "s/variables_order.*/variables_order = \"EGPCS\"/g" /etc/php5/apache2/php.ini
