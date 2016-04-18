@@ -9,7 +9,6 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -yq install \
         curl \
         postfix \
-        mailutils \
 	ssmtp \
         apache2 \
         libapache2-mod-php53 \
