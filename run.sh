@@ -8,6 +8,7 @@ else
     a2enmod rewrite
 fi
 
+#php issues
 a2enmod mpm_prefork
 a2dismod mpm_event
 a2enmod php52
