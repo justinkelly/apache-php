@@ -8,6 +8,8 @@ else
     a2enmod rewrite
 fi
 
+a2enmod mpm_prefork
+a2dismod mpm_event
 a2enmod php53
 
 source /etc/apache2/envvars
