@@ -10,7 +10,7 @@ fi
 
 a2enmod mpm_prefork
 a2dismod mpm_event
-a2enmod php53
+a2enmod php52
 
 source /etc/apache2/envvars
 /s3 --region "${AWS_REGION}" sync s3://docker-files.invoice.im/${DOMAIN}/logo/ /app/templates/invoices/logos/
