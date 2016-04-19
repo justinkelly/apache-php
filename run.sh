@@ -8,6 +8,8 @@ else
     a2enmod rewrite
 fi
 
+a2enmod php53
+
 source /etc/apache2/envvars
 /s3 --region "${AWS_REGION}" sync s3://docker-files.invoice.im/${DOMAIN}/logo/ /app/templates/invoices/logos/
 /s3 --region "${AWS_REGION}" sync s3://docker-files.invoice.im/${DOMAIN}/template/ /app/templates/invoices/
